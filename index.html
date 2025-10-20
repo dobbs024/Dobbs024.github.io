@@ -3,10 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Sam Dobbs - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>This is my first website on GitHub</p>
+    <header>
+        <div class="profile-container">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop" alt="Sam Dobbs" class="profile-image">
+            <h1>Sam Dobbs</h1>
+            <p>Web Developer & HTML5 Enthusiast</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Sam Dobbs, a passionate web developer with a focus on creating modern, responsive, and user-friendly websites. I'm currently expanding my knowledge in HTML5 and modern web technologies.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>My Work</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <h3>Project 1</h3>
+                    <p>Coming soon...</p>
+                </div>
+                <div class="work-item">
+                    <h3>Project 2</h3>
+                    <p>Coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="assignments">
+            <h2>HTML5 Assignments</h2>
+            <p>Check out my weekly HTML5 assignments:</p>
+            <ul id="assignment-list">
+                <!-- JavaScript will populate this list -->
+            </ul>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Download my resume or view my professional experience below.</p>
+            <!-- Add resume content here -->
+        </section>
+    </main>
+
+    <script>
+        // Populate assignments list
+        const assignmentList = document.getElementById('assignment-list');
+        for (let i = 1; i <= 16; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="assignments/Week${i}/index.html">Week ${i} Assignment</a>`;
+            assignmentList.appendChild(li);
+        }
+    </script>
 </body>
 </html>
